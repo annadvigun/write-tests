@@ -1,4 +1,4 @@
-//Test 1: Perform Login
+//Test 1: Perform Login (async)
 
 describe('Login saucedemo', () => {
     it('should login using "standard_user"', async () => {
@@ -28,6 +28,5 @@ describe('Login saucedemo', () => {
     expect(products.length).toBeGreaterThanOrEqual(2);
   });
 });
-
 
 

@@ -1,6 +1,4 @@
-import { expect, browser, $ } from '@wdio/globals'
-
-//Test 2: Add Product to the Cart
+//Test 2 not async: Add Product to the Cart
 
 describe('Add product to the cart', () => {
     it('should add product to the cart and then remove it"', () => {
@@ -10,7 +8,7 @@ describe('Add product to the cart', () => {
 
         const cartIcon = $('.shopping_cart_container'); 
         expect(cartIcon).toHaveText('1');
-        
+
         //Open shopping cart
         const shoppingCartLink = $('.shopping_cart_link'); 
         shoppingCartLink.click();
@@ -23,10 +21,10 @@ describe('Add product to the cart', () => {
 
         const removeButton = $('.remove-sauce-labs-backpack');
         removeButton.click();
-        
+
         const emptyCart = $('.removed_cart_item'); 
         expect(emptyCart).toBeDisplayed();
-
     });
 });
+
 
